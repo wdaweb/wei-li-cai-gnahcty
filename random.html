@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>威力彩</title>
+</head>
+
+<body>
+    <script>
+        // document.write(Math.round(100 * Math.random()))
+
+        const rand = (min, max) => {
+            return min + Math.round((max - min) * Math.random())
+        }
+
+        let a = []
+        while (a.length < 6) {
+            let x = rand(1, 38)
+            if (a.indexOf(x) == -1) {
+                a.push(x)
+            }
+        }
+
+        document.write(`A區：${a} <br> B區：${rand(1, 8)}`)
+
+        console.log(a)
+    </script>
+</body>
+
+</html>
